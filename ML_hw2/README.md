@@ -19,4 +19,8 @@
 '''python
 python PLA.py –-path filename -–save_img True 
 '''
-
+```python
+def hello_world():
+print("Hello, world!")
+hello_world()
+```
