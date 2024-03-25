@@ -9,4 +9,14 @@
 2. 預測錯誤，則根據感知器學習規則進行權重的更新。將錯誤分類的樣本的特徵向量乘以其標籤（即誤差），然後加到權重向量上：
     w = w + y⋅x
    
-![loss](PIC/PIC1.png)
+    ![loss](PIC/PIC1.png)
+
+## Pocket Algorithm
+1. 目標是找到一個在訓練數據上表現最好的超平面，而不是完全分類訓練數據。
+2. 保留一個“Pocket”來記錄在訓練過程中遇到的最佳權重，而不是在每次迭代中都更新權重。
+
+## How to run
+'''
+python PLA.py –-path filename -–save_img True 
+'''
+
