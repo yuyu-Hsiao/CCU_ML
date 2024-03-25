@@ -16,11 +16,7 @@
 2. 保留一個“Pocket”來記錄在訓練過程中遇到的最佳權重，而不是在每次迭代中都更新權重。
 
 ## How to run
-'''python
-python PLA.py –-path filename -–save_img True 
-'''
-```python
-def hello_world():
-print("Hello, world!")
-hello_world()
 ```
+python PLA.py –-path filename -–save_img True 
+```
+
