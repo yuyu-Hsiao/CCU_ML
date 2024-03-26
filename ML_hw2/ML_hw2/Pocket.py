@@ -15,7 +15,8 @@ def pocket(perceptron: LinearPerceptron, iter_num) -> np.ndarray:
     """
     start_time = time.time()
     weight_matrix = np.zeros(3)
-    best_weight = np.copy(weight_matrix)
+    # best_weight = np.copy(weight_matrix)
+    best_weight = weight_matrix
     best_errors = len(perceptron.label)       
     ############START##########
     iter_cnt = 0
@@ -29,13 +30,16 @@ def pocket(perceptron: LinearPerceptron, iter_num) -> np.ndarray:
         
         # 如果所有資料都正確分類，則結束迴圈
         if errors == 0:
+            best_weight = np.copy(weight_matrix)
+            best_errors = errors
             print(iter_cnt)
             break
         
 
         if best_errors>errors:
             best_errors = errors
-            best_weight = np.copy(weight_matrix)
+            #best_weight = np.copy(weight_matrix)
+            best_weight = weight_matrix
             print(best_errors)
 
         # 隨機選擇一個錯誤的點，更新權重
